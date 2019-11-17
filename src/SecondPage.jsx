@@ -1,10 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import {Toolbar, Page, Button, BackButton} from 'react-onsenui';
+import React from "react";
+// eslint-disable-next-line no-unused-vars
+import ReactDOM from "react-dom";
+import { Toolbar, Page, Button, BackButton } from "react-onsenui";
 
-export default class SecondPage extends React.Component {
+class SecondPage extends React.Component {
   pushPage() {
-    this.props.navigator.pushPage({component: SecondPage});
+    this.props.navigator.pushPage({ component: SecondPage });
   }
 
   popPage() {
@@ -14,7 +15,9 @@ export default class SecondPage extends React.Component {
   renderToolbar() {
     return (
       <Toolbar>
-        <div className="left"><BackButton>Back</BackButton></div>
+        <div className="left">
+          <BackButton>Back</BackButton>
+        </div>
         <div className="center">Another page</div>
       </Toolbar>
     );
@@ -23,7 +26,7 @@ export default class SecondPage extends React.Component {
   render() {
     return (
       <Page renderToolbar={this.renderToolbar}>
-        <p style={{textAlign: 'center'}}>
+        <p style={{ textAlign: "center" }}>
           <Button onClick={this.pushPage.bind(this)}>Push page</Button>
           <Button onClick={this.popPage.bind(this)}>Pop page</Button>
         </p>
@@ -31,3 +34,5 @@ export default class SecondPage extends React.Component {
     );
   }
 }
+
+export default SecondPage();

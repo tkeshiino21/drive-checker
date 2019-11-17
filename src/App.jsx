@@ -1,8 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import {Navigator} from 'react-onsenui';
+import React from "react";
+// eslint-disable-next-line no-unused-vars
+import ReactDOM from "react-dom";
+import { Navigator } from "react-onsenui";
 
-import MainPage from './MainPage'
+import MainPage from "./MainPage";
 
 export default class App extends React.Component {
   renderPage(route, navigator) {
@@ -14,7 +15,10 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <Navigator initialRoute={{component: MainPage}} renderPage={this.renderPage} />
+      <Navigator
+        initialRoute={{ component: MainPage }}
+        renderPage={this.renderPage}
+      />
     );
   }
 }
